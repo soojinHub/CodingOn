@@ -8,6 +8,9 @@ def index(request):
 def test(request):
     return HttpResponse("<h2> Test </h2>")
 
+def git(request):
+    return HttpResponse("<h2>git version</h2>")
+
 def signup(request):
     if request.method=='POST':
        username = request.POST['username']
