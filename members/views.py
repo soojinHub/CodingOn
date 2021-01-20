@@ -11,6 +11,20 @@ def test(request):
 def git(request):
     return HttpResponse("<h2>git version</h2>")
 
+def gugu(request):
+    num = request.GET.get('num','')
+    return HttpResponse(f"<h1>구구단 : {num}<br>{num_gugu(num)}</h1>")
+
+           
+
+def num_gugu(num):
+    str=""
+    for i in range (2,10):
+        str += f"{num}*{i}={int(num)*i}<br>"
+    return str
+        
+
+
 def signup(request):
     if request.method=='POST':
        username = request.POST['username']
