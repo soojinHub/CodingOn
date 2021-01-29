@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'members',
     'lms',
-    'lottos'
+    'lottos',
+	'novel'
     ]
 
 MIDDLEWARE = [

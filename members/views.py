@@ -52,25 +52,29 @@ def num_gugu(num):
 
 
 def signup(request):
-    if request.method=='POST':
-       username = request.POST['username']
-       email = request.POST['email']
+	if request.method=='POST':
+		username = request.POST['username']
+		email = request.POST['email']
 
       # if username == 'exit':
       #    return HttpResponse("<h2>"+나가기+"</h2>")
       # elif username == 'soojin':
       #     return render(request, 'adminUser.html')
-       member = Members(
-            username = username,
-            useremail = email
-       )
-       member.save()
+		member = Members(
+			username = username,
+			useremail = email
+		)
+		member.save()
 
-       res_data = {}
-       res_data['res'] = '등록성공'
+		res_data = {}
+		res_data['res'] = '등록성공'
 
-       return render(request, 'index.html', res_data)
-    return render(request, 'index.html')
+		return render(request, 'index.html', res_data)
+	return render(request, 'index.html')
 
 def schedule(request):
-    return render(request, 'schedule.html')
+	context = {"loop":range( 1,32 )}
+	return render(request, 'schedule.html', context)
+
+def menu(request):
+    return render(request, 'menu.html')

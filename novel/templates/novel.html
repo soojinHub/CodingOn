@@ -1,0 +1,35 @@
+<h1> 웹소설 </h1>
+
+<img src="http://118.67.133.33:8000/static/b.jpg"/>
+<link rel="stylesheet" href = "/static/style_novel.css">
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+ 
+<body>
+<p>{{ch_1}} 이 {{ch_2}}를 보고 말했습니다. </p>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+function append_hello(){
+    $(".my_class").html("안녕! 만나서 반가워!");
+}
+
+function append_who(){
+    $(".my_class").html("너는 누구니?");
+}
+
+function append_goAway(){
+    $(".my_class").html("저리 꺼져!!");
+}
+ </script>
+
+<div id="div1" class="my_class"></div>
+<br>
+<p>---------------------------------------------</p>
+<p>어떤 반응을 보일까요?</p>
+<button onclick="append_hello();">반가움</button>
+<button onclick="append_who();">호기심</button>
+<button onclick="append_goAway();">적대심</button>
+<p>---------------------------------------------</p>
+</body>
