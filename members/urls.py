@@ -8,6 +8,7 @@ urlpatterns = [
      path('schedule', views.schedule),
      path('git', views.git),
      path('gugu', views.gugu),
-     path('login', views.login)
+     path('login', views.login),
+     path('menu', views.menu)
          ]
 
